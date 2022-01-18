@@ -24,12 +24,17 @@ a:hover {
 }
 
 .header {
-  max-width: 70.62495rem;
+  width: 100%;
   background: #fff;
   font-weight: 700;
-  padding: 0 15px;
   border-bottom: 1px solid #bfbfbf;
-  margin: 30px auto 6px;
+  margin: 30px 0 6px;
+
+  .header-wrapper {
+    max-width: 70.62495rem;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
 
   .header-top {
     display: flex;
@@ -102,6 +107,7 @@ a:hover {
         list-style-type: none;
 
         li {
+          position: relative;
           padding: 0 0 0.51562rem;
           margin: 0 1.03125rem 0 0;
 
@@ -110,19 +116,47 @@ a:hover {
             font-size: 18px;
           }
 
+          a::after {
+            background-color: #002837;
+            bottom: -1px;
+            content: "";
+            height: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            transition: 0.2s;
+            z-index: 10;
+          }
+
+          a:hover::after {
+            height: 0.34375rem;
+          }
+
           .nav-link-secondary {
             color: $highlight-color;
           }
+        }
 
-          .more::after {
-            display: inline-block;
-            content: "»";
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 16px;
-            font-weight: normal;
-            margin-left: 10px;
-            transform: rotate(90deg);
-          }
+        .more::after {
+          display: inline-block;
+          content: "»";
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 16px;
+          font-weight: normal;
+          margin-left: 10px;
+          transform: rotate(90deg);
+        }
+
+        .selected::after {
+          background-color: #002837;
+          bottom: -1px;
+          content: "";
+          height: 0.34375rem;
+          left: 0;
+          position: absolute;
+          right: 0;
+          transition: 0.2s;
+          z-index: 10;
         }
       }
     }
@@ -133,6 +167,16 @@ a:hover {
         font-size: 18px;
         color: #002837;
       }
+
+      a:hover {
+        color: #999;
+        text-decoration: underline;
+      }
+
+      a:hover svg {
+        fill: #999;
+      }
+
       .signin {
         margin-right: 0.45833rem;
       }
@@ -153,4 +197,13 @@ a:hover {
       }
     }
   }
+}
+
+.page-main {
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 70.62495rem;
+  margin: 0 auto;
+  padding: 0 0.93747rem;
 }
