@@ -1,0 +1,84 @@
+@import "config";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: $text-color;
+  font-family: $font-stack;
+  line-height: 23px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: $highlight-color;
+}
+
+.header {
+  max-width: 70.62495rem;
+  background: #fff;
+  font-weight: 700;
+  padding: 0 15px;
+  border-bottom: 1px solid #bfbfbf;
+  margin: 30px auto 6px;
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.6875rem;
+
+    .header-promo {
+      h3 {
+        color: $highlight-color;
+        text-transform: uppercase;
+      }
+
+      p {
+        color: #999;
+        font-weight: normal;
+      }
+    }
+
+    .header-logo {
+      width: 42.2%;
+      height: 3.5rem;
+      text-align: center;
+      margin-right: 2%;
+
+      img {
+        height: 3.5rem;
+        width: 21.875rem;
+      }
+    }
+
+    .header-subscribe {
+      width: 26.9%;
+      text-align: right;
+
+      a {
+        display: inline-block;
+        width: 15rem;
+        color: #fff;
+        background: $highlight-color;
+        padding: 0.45833rem;
+        border-radius: 0.188rem;
+        margin-bottom: 0.34375rem;
+        line-height: 1rem;
+        text-align: center;
+        letter-spacing: -0.0375rem;
+      }
+    }
+  }
+  a {
+    font-family: Titillium Web, Helvetica, Trebuchet MS, Arial, sans-serif;
+  }
+}
