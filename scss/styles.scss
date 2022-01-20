@@ -51,6 +51,7 @@ a {
         text-transform: uppercase;
         letter-spacing: -0.0375rem;
         font-size: 16px;
+        margin-bottom: 0;
       }
 
       p {
@@ -843,17 +844,47 @@ h6 {
     .article-main {
       max-width: 100%;
     }
+
+    .sidebar {
+      margin: 0 auto;
+    }
   }
 
   .social-others {
     flex-direction: column;
 
     .social {
+      display: flex;
+      justify-content: center;
       width: 100%;
+      max-width: 100%;
+      margin-right: 0;
     }
     .section-wrapper {
       flex-direction: column;
       text-align: center;
+    }
+  }
+
+  .more-content {
+    .cards-wrapper {
+      flex-direction: column;
+
+      .card {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .footer {
+    .signup-form {
+      flex-direction: column;
+    }
+    .footer-nav {
+      ul {
+        flex-wrap: wrap;
+      }
     }
   }
 }
